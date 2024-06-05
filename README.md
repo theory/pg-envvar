@@ -4,62 +4,81 @@ envvar 1.0.4
 [![PGXN version](https://badge.fury.io/pg/envvar.svg)](https://badge.fury.io/pg/envvar)
 [![Build Status](https://github.com/theory/pg-envvar/workflows/CI/badge.svg)](https://github.com/theory/pg-envvar/actions)
 
-This library contains a single PostgreSQL extension, `envvar`, which
-provides a function, `get_env(TEXT)`, that returns the value of an environment
-variable set on the database server
+This library contains a single PostgreSQL extension, `envvar`, which provides
+a function, `get_env(TEXT)`, that returns the value of an environment variable
+set on the database server
 
-    % SELECT get_env();
-     get_env 
-    ---------
-     UTC
+``` psql
+ get_env 
+---------
+ UTC
+```
 
 To build envvar, just do this:
 
-    make
-    make installcheck
-    make install
+``` sh
+make
+make installcheck
+make install
+```
 
 If you encounter an error such as:
 
-    "Makefile", line 8: Need an operator
+```
+"Makefile", line 8: Need an operator
+```
 
 You need to use GNU make, which may well be installed on your system as
 `gmake`:
 
-    gmake
-    gmake install
-    gmake installcheck
+``` sh
+gmake
+gmake install
+gmake installcheck
+```
 
 If you encounter an error such as:
 
-    make: pg_config: Command not found
+```
+make: pg_config: Command not found
+```
 
 Be sure that you have `pg_config` installed and in your path. If you used a
 package management system such as RPM to install PostgreSQL, be sure that the
 `-devel` package is also installed. If necessary tell the build process where
 to find it:
 
-    env PG_CONFIG=/path/to/pg_config make && make installcheck && make install
+``` sh
+env PG_CONFIG=/path/to/pg_config make && make installcheck && make install
+```
 
 If you encounter an error such as:
 
-    ERROR:  must be owner of database regression
+```
+ERROR:  must be owner of database regression
+```
 
 You need to run the test suite using a super user, such as the default
 "postgres" super user:
 
-    make installcheck PGUSER=postgres
+``` sh
+make installcheck PGUSER=postgres
+```
 
 Once envvar is installed, you can add it to a database by connecting to a
 database as a super user and running:
 
-    CREATE EXTENSION envvar;
+``` sql
+CREATE EXTENSION envvar;
+```
 
 If you want to install envvar and all of its supporting objects into a
 specific schema, use the `SCHEMA` clause to specify the schema, like so:
 
-    CREATE SCHEMA env;
-    CREATE EXTENSION envvar SCHEMA env;
+``` sql
+CREATE SCHEMA env;
+CREATE EXTENSION envvar SCHEMA env;
+```
 
 Dependencies
 -----------
@@ -70,7 +89,7 @@ library, `<stdlib.h>`.
 Copyright and License
 ---------------------
 
-Copyright (c) 2014 David E. Wheeler.
+Copyright (c) 2024 David E. Wheeler.
 
 This module is free software; you can redistribute it and/or modify it under
 the [PostgreSQL License](http://www.opensource.org/licenses/postgresql).
