@@ -9,6 +9,7 @@ a function, `get_env(TEXT)`, that returns the value of an environment variable
 set on the database server
 
 ``` psql
+% SELECT get_env('PGTZ');
  get_env 
 ---------
  UTC
