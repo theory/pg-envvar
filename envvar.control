@@ -1,0 +1,5 @@
+# envvar extension
+comment = 'Get the value of a server environment variable'
+default_version = '1.0.0'
+module_pathname = '$libdir/envvar'
+relocatable = true

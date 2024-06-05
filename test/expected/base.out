@@ -1,0 +1,19 @@
+CREATE EXTENSION envvar;
+SELECT COALESCE(length(get_env('HOME')), 0) >= 0;
+ ?column? 
+----------
+ t
+(1 row)
+
+SELECT get_env('no such envvar');
+ get_env 
+---------
+ 
+(1 row)
+
+SELECT get_env(NULL);
+ get_env 
+---------
+ 
+(1 row)
+
