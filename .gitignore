@@ -4,9 +4,9 @@ tmp/
 *.o
 regression.diffs
 regression.out
-/sql/envvar--?.?.?.sql
 /envvar-*
 /src/*.dylib
 /src/*.so
 /src/*.o
 /src/*.dll
+/src/*.bc
