@@ -1,8 +1,8 @@
-envvar 1.0.4
-==============
+envvar 1.0.0
+============
 
 [![PGXN version](https://badge.fury.io/pg/envvar.svg)](https://badge.fury.io/pg/envvar)
-[![Build Status](https://github.com/theory/pg-envvar/workflows/CI/badge.svg)](https://github.com/theory/pg-envvar/actions)
+[![Build Status](https://github.com/theory/pg-envvar/actions/workflows/ci.yml/badge.svg)](https://github.com/theory/pg-envvar/actions/workflows/ci.yml)
 
 This library contains a single PostgreSQL extension, `envvar`, which provides
 a function, `get_env(TEXT)`, that returns the value of an environment variable
