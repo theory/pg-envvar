@@ -1,4 +1,4 @@
-envvar 1.0.0
+envvar 1.0.1
 ============
 
 [![PGXN version](https://badge.fury.io/pg/envvar.svg)](https://badge.fury.io/pg/envvar)
@@ -66,6 +66,21 @@ You need to run the test suite using a super user, such as the default
 make installcheck PGUSER=postgres
 ```
 
+To install the extension in a custom prefix on PostgreSQL 18 or later, pass
+the `prefix` argument to `install` (but no other `make` targets):
+
+```sh
+make install prefix=/usr/local/extras
+```
+
+Then ensure that the prefix is included in the following [`postgresql.conf`
+parameters]:
+
+```ini
+extension_control_path = '/usr/local/extras/postgresql/share:$system'
+dynamic_library_path   = '/usr/local/extras/postgresql/lib:$libdir'
+```
+
 Once envvar is installed, you can add it to a database by connecting to a
 database as a super user and running:
 
@@ -90,7 +105,7 @@ library, `<stdlib.h>`.
 Copyright and License
 ---------------------
 
-Copyright (c) 2024 David E. Wheeler.
+Copyright (c) 2024-2025 David E. Wheeler.
 
 This module is free software; you can redistribute it and/or modify it under
 the [PostgreSQL License](http://www.opensource.org/licenses/postgresql).

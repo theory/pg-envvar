@@ -1,5 +1,5 @@
-envvar 1.0.0
-==============
+envvar 1.0.1
+============
 
 Synopsis
 --------
@@ -39,7 +39,7 @@ Author
 Copyright and License
 ---------------------
 
-Copyright (c) 2024 David E. Wheeler.
+Copyright (c) 2024-2025 David E. Wheeler.
 
 This module is free software; you can redistribute it and/or modify it under
 the [PostgreSQL License](http://www.opensource.org/licenses/postgresql).
