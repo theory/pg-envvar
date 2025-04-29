@@ -1,4 +1,4 @@
-envvar 1.0.1
+envvar 1.0.0
 ============
 
 Synopsis

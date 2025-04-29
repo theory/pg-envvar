@@ -1,5 +1,5 @@
-envvar 1.0.1
-============
+envvar Postgres Extension
+=========================
 
 [![PGXN version](https://badge.fury.io/pg/envvar.svg)](https://badge.fury.io/pg/envvar)
 [![Build Status](https://github.com/theory/pg-envvar/actions/workflows/ci.yml/badge.svg)](https://github.com/theory/pg-envvar/actions/workflows/ci.yml)

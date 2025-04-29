@@ -1,9 +1,14 @@
 Revision history for PostgreSQL extension envvar.
 
-1.0.1
+1.0.1   2025-04-29T18:27:29Z
       - Removed the `$libdir/` prefix from the `module_pathname` directive,
         so that the module can be installed and found in any directory listed
         in `dynamic_library_path`.
+      - Supports PostgreSQL 9.1–18.
+      - The version of the extension itself remains 1.0.0.
+      - Added notes on using `make install prefix=` and the
+        `extension_control_path` and `dynamic_library_path` GUCs on PostgreSQL
+        18.
 
 1.0.0   2024-06-05T17:33:05Z
       - Initial version.
