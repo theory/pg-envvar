@@ -10,3 +10,5 @@ regression.out
 /src/*.o
 /src/*.dll
 /src/*.bc
+.vscode/
+/build/
